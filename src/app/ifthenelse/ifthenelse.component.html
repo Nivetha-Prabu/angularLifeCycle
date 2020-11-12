@@ -1,0 +1,52 @@
+<!-- if block simple -->
+
+<!-- <div>
+    <input type="radio" name="rb" (click)= "ChangeData(true)"  checked> Valid
+    <input type="radio" name="rb" (click)= "ChangeData(false)" > Invalid
+  </div>
+
+  <div *ngIf="isValid">
+     <b>The Data is valid.</b>
+  </div>  
+   
+  <div *ngIf="!isValid">
+     <b>The Data is invalid.</b>
+  </div> -->
+
+  <div>
+    <input type="radio" name="rb" (click)= "ChangeData(true)" checked > Valid
+    <input type="radio" name="rb" (click)= "ChangeData(false)"> Invalid
+  </div>
+
+  <div *ngIf="isValid then thenblock else elseblock"> </div>
+
+  <ng-template #thenblock>
+    <div>
+    <b>This Then Block</b>
+   </div>  
+  </ng-template>
+ 
+
+  <ng-template #elseblock>
+    <div >
+        <b>This Else Block</b>
+     </div> 
+  </ng-template>
+
+  <h2>Select Country</h2>
+
+<select (change)="SetDropDownValue($event)">
+  <option value="">Select</option>
+  <option value="In">In</option>
+  <option value="US">US</option>
+  <option value="UK">UK</option>
+</select>
+
+<h2>You Have Selected</h2>
+
+<div [ngSwitch] = 'dropDownValue'>
+  <h3 *ngSwitchCase="'In'">India</h3>
+  <h3 *ngSwitchCase="'US'">United State</h3>
+  <h3 *ngSwitchCase="'UK'">United Kingdom</h3>
+  <h3 *ngSwitchDefault="">You have not selected any country</h3>
+</div>

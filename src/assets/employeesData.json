@@ -1,0 +1,15 @@
+[
+    {
+        "id":"Emp01",
+        "name":"Nivetha",
+        "department":"IT",
+        "salary": "5Lakh"
+    },
+    {
+        "id":"Emp02",
+        "name":"Nivetha Prabu",
+        "department":"developer",
+        "salary": "10Lakh"
+
+    }
+]
